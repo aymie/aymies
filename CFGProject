@@ -1,0 +1,19 @@
+def recipe_search(ingredient):
+    app_id = '9f567778'
+    app_key = '96138f0fffc2d15374275b19fc2085e1'
+    result = requests.get(
+'https://api.edamam.com/search?q={}&app_id={}&app_key={}'.format(ingredient, app_id, api_key,
+
+
+
+app_key)
+)
+
+    data = result.json()
+    return data['hits']
+def run():
+
+
+    ingredient = input("Enter an ingredient to search for recipes: ")
+    print(recipe["name"])
+    print(recipe["ingredients"])
