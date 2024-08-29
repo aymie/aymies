@@ -14,6 +14,18 @@ app_key)
 def run():
 
 
-    ingredient = input("Enter an ingredient to search for recipes: ")
+    ingredients = input("Enter an ingredient to search for recipes: ")
     print(recipe["name"])
     print(recipe["ingredients"])
+
+import requests
+
+Dish_ingredients = input("What are the Dish ingredients ?")
+# URL = https://developer.edamam.com/api/faq
+URL = f"https://developer.edamam.com/api/faq"
+response = requests(url)
+Dish_ingredients  = response.json()
+print(dish_ingredients ['id'])
+print(dish_ingredients ['name'])
+print(dish_ingredients ['height'])
+print(dish_ingredients ['weight'])
